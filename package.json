@@ -1,0 +1,62 @@
+{
+  "name": "hootsuite-embedded-app-template",
+  "version": "1.0.0",
+  "description": "Template for building embedded apps for the Hootsuite platform",
+  "author": "Hootsuite",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ./scripts/start.ts",
+    "build": "webpack --config webpack.config.ts --mode production",
+    "build:dev": "webpack --config webpack.config.ts --mode development",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "lint:types": "tsc --noEmit",
+    "format": "prettier '**/*.{ts,tsx,css,json}' --write",
+    "format:check": "prettier '**/*.{ts,tsx,css,json}' --check",
+    "postinstall": "ts-node ./scripts/copy_env.ts",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "hootsuite-bento": "resources/bento/hootsuite-bento-0.0.1.tgz",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-error-boundary": "^6.1.0",
+    "react-router-dom": "^7.13.0"
+  },
+  "devDependencies": {
+    "@ngrok/ngrok": "^1.7.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "concurrently": "^9.1.0",
+    "cors": "^2.8.5",
+    "css-loader": "^7.1.2",
+    "cssnano": "^7.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.0",
+    "postcss-loader": "^8.1.1",
+    "prettier": "^3.3.0",
+    "selfsigned": "^5.5.0",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0",
+    "storybook": "^10.3.1",
+    "@storybook/react-webpack5": "^10.3.1",
+    "@storybook/addon-webpack5-compiler-swc": "^4.0.2",
+    "@storybook/addon-a11y": "^10.3.1",
+    "@storybook/addon-docs": "^10.3.1"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}
