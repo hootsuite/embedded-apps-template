@@ -1,7 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import type { HyperlinkProps } from 'hootsuite-bento';
-import Icon from '@fp-icons/icon-base';
 import { fn } from 'storybook/test';
 
 import { Box, Hyperlink } from 'hootsuite-bento';
@@ -70,17 +69,9 @@ export const ClientHandledLink: Story = {
   },
 };
 
-export const ImgWithRoleLink: Story = {
-  args: {
-    children: <Icon name="open_in_new" size={32} fill />,
-    onPress: fn(),
-    'aria-label': 'Open in new window',
-  },
-};
-
 function TextWithHyperlinksComponent(args: HyperlinkProps) {
   return (
-    <Box as="span" typography="hs-sys-text-base-medium" color="text-base">
+    <Box as='span' typography='hs-sys-text-base-medium' color='text-base'>
       Lorem ipsum dolor <i>sit</i> amet. <Hyperlink {...args} /> More text{' '}
       <Hyperlink {...args} isExternalLink /> end.
     </Box>
@@ -99,7 +90,7 @@ export const WithinFixedWidthContainer: Story = {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia augue non neque venenatis.',
   },
   decorators: [
-    Comp => (
+    (Comp) => (
       <div style={{ width: 200 }}>
         <Comp />
       </div>
@@ -115,7 +106,7 @@ export const InheritsFont: Story = {
   },
   render: function Render(args: HyperlinkProps) {
     return (
-      <Box typography="hs-sys-text-base-small" as="p">
+      <Box typography='hs-sys-text-base-small' as='p'>
         While the surrounding text uses hs-sys-text-base-small typography,{' '}
         <Hyperlink {...args} />.
       </Box>
@@ -131,9 +122,8 @@ export const InheritsColor: Story = {
   },
   render: function Render(args: HyperlinkProps) {
     return (
-      <Box backgroundColor="fill-negative" padding="4">
-        On a colored background,{' '}
-        <Hyperlink {...args} />.
+      <Box backgroundColor='fill-negative' padding='4'>
+        On a colored background, <Hyperlink {...args} />.
       </Box>
     );
   },

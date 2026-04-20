@@ -1,6 +1,5 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import type { Glyph } from '@fp-icons/icon-base';
 
 import { Badge } from 'hootsuite-bento';
 
@@ -41,16 +40,6 @@ export const TextWithIcon: Story = {
 export const IconOnly: Story = {
   args: {
     iconProps: { name: 'check_circle', fill: true, 'aria-label': 'Published' },
-    type: 'positive',
-  },
-};
-
-const customBadgeGlyph: Glyph = ({ html }) =>
-  html`<polygon points="16.25 13.75 10 6.25 3.75 13.75" />`;
-
-export const SVGIconOnly: Story = {
-  args: {
-    iconProps: { glyph: customBadgeGlyph, 'aria-label': 'Published' },
     type: 'positive',
   },
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import type { LabelProps } from 'hootsuite-bento';
-import Icon from '@fp-icons/icon-base';
 
 import { Box, Label } from 'hootsuite-bento';
 
@@ -25,12 +24,11 @@ export const WithHelper: Story = {
     helper: (
       <div style={{ display: 'inline' }}>
         <Box
-          display="inline"
-          marginRight="hs-sys-spacing-text-to-element-x-small"
+          display='inline'
+          marginRight='hs-sys-spacing-text-to-element-x-small'
         >
           {'(helper message)'}
         </Box>
-        <Icon name="local_florist" aria-label="This is an icon with a flower" />
       </div>
     ),
   },
@@ -49,12 +47,11 @@ export const WithHelperAndDescription: Story = {
     helper: (
       <div style={{ display: 'inline' }}>
         <Box
-          display="inline"
-          marginRight="hs-sys-spacing-text-to-element-x-small"
+          display='inline'
+          marginRight='hs-sys-spacing-text-to-element-x-small'
         >
           {'(helper message)'}
         </Box>
-        <Icon name="local_florist" fill color="green" />
       </div>
     ),
     description: 'An optional string value that labels the element',
@@ -67,12 +64,11 @@ export const WithAdditionalInfo: Story = {
     helper: (
       <div style={{ display: 'inline' }}>
         <Box
-          display="inline"
-          marginRight="hs-sys-spacing-text-to-element-x-small"
+          display='inline'
+          marginRight='hs-sys-spacing-text-to-element-x-small'
         >
           {'(helper message)'}
         </Box>
-        <Icon name="local_florist" fill color="green" />
       </div>
     ),
     description: 'An optional string value that labels the element',
@@ -98,12 +94,11 @@ export const WithinFixedWidthContainer: Story = {
     helper: (
       <div style={{ display: 'inline' }}>
         <Box
-          display="inline"
-          marginRight="hs-sys-spacing-text-to-element-x-small"
+          display='inline'
+          marginRight='hs-sys-spacing-text-to-element-x-small'
         >
           {'(this is quite a long helper message, very long indeed)'}
         </Box>
-        <Icon name="local_florist" aria-label="This is an icon with a flower" />
       </div>
     ),
     description:
